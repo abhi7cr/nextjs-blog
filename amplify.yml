@@ -9,9 +9,9 @@ applications:
           commands:
             - amplifyPush --simple
             - npm run build
-            - aws s3 sync "s3://n2v0ob4-u9glwmk" .serverless   # pull what we had before
+            - aws s3 sync "s3://xrhk8ga-uxwxk18" .serverless   # pull what we had before
             - npx serverless                                   # generate new
-            - aws s3 sync .serverless "s3://n2v0ob4-u9glwmk"   # push to bucket
+            - aws s3 sync .serverless "s3://xrhk8ga-uxwxk18"   # push to bucket
     frontend:
       phases:
         build:
