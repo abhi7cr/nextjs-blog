@@ -9,9 +9,9 @@ backend:
       commands:
         - amplifyPush --simple
         - npm run build
-        - aws s3 sync "s3://serverless-tst-app-bucket-jffranzo/mynextapp/.serverless" .serverless   # pull previous state
+        - aws s3 sync "s3://serverless-tst-app-bucket-jffranzo/mynextapp/newtst/.serverless" .serverless   # pull previous state
         - npx serverless                                                                            # generate new & deploy!
-        - aws s3 sync .serverless "s3://serverless-tst-app-bucket-jffranzo/mynextapp/.serverless"   # push state to bucket
+        - aws s3 sync .serverless "s3://serverless-tst-app-bucket-jffranzo/mynextapp/newtst/.serverless"   # push state to bucket
 frontend:
   phases:
     build:
